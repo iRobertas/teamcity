@@ -1,0 +1,17 @@
+#/usr/lib/systemd/system/teamcity.service
+
+[Unit]
+Description=TeamCity Server
+After=network.target
+
+[Service]
+Type=simple
+PIDFile=/opt/TeamCity/run/teamcity.pid
+EnvironmentFile=/etc/sysconfig/teamcity
+RemainAfterExit=yes
+User=teamcity
+ExecStart=/opt/TeamCity/bin/teamcity-server.sh start
+ExecStop=/opt/TeamCity/bin/teamcity-server.sh stop
+
+[Install]
+WantedBy=multi-user.target

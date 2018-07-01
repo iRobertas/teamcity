@@ -1,0 +1,9 @@
+#/etc/sysconfig/teamcity
+
+JAVA_HOME=/usr/java/default
+JAVA_OPTS="-server -Dfile.encoding=utf-8 -Djava.net.preferIPv4Stack=true -Djava.net.preferIPv4Addresses=true -Djava.awt.headless=true"
+TEAMCITY_DATA_PATH=/opt/TeamCity/data
+TEAMCITY_SERVER_MEM_OPTS="-Xmx1048m"
+TEAMCITY_SERVER_OPTS=""
+# TEAMCITY_PREPARE_SCRIPT name of a script to execute before start/stop
+TEAMCITY_PID_FILE_PATH=/opt/TeamCity/run/teamcity.pid
